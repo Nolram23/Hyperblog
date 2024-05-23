@@ -1,0 +1,137 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>MOKEPON!</title>
+        <link rel="stylesheet" href="./styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <section id= "seleccionar-mascota">
+            <h1 id="titulo" class="titulo">MOKEPON!</h1>
+
+            <h2 class="subtitulo">Elije a tu mascota: </h2>
+
+        <div id= 'contenedorTarjetas'class="tarjetas">
+         <!--    
+            <input type="radio" name="mascota" id="Hipodoge"/>
+            <label class="tarjeta-de-mokepon" for="Hipodoge">
+                <p>Hipodoge</p>
+                <img src="./assets/mokepons_mokepon_hipodoge_attack.png" alt="Hipodoge">
+            </label>
+            <input type="radio" name="mascota" id="Capipepo"/>
+            <label class="tarjeta-de-mokepon" for="Capipepo">
+                <p>Capipepo</p>
+                <img src="./assets/mokepons_mokepon_capipepo_attack.png" alt="Capipepo">
+            </label>
+            <input type="radio" name="mascota" id="Ratigueya"/>
+            <label class="tarjeta-de-mokepon" for="Ratigueya">
+                <p>Ratigueya</p>
+                <img src="./assets/mokepons_mokepon_ratigueya_attack.png" alt="Ratigueya">
+            </label> -->
+            
+        </div>
+
+           <!--  <label for="Langostelvis">Langostelvis</label>
+            <input type="radio" name="mascota" id="Langostelvis"/>
+            <label for="Tucapalma">Tucapalma</label>
+            <input type="radio" name="mascota" id="Tucapalma"/>
+            <label for="Pydos">Pydos</label>
+            <input type="radio" name="mascota" id="Pydos"/>  -->           
+
+        <!--     <!–Hipodoge  agua 
+             Capipepo tierra  
+             Ratigueya  fuego 
+             Langostelv is  agua y fuego 
+             Tucapalma  agua y tierra 
+             Pydos  tierra y fuego ->
+             -->
+
+            <button id="boton-mascota"> Seleccionar </button>
+        </section>
+
+        <section id="ver-mapa">
+            <h1 id="titulo" class="titulo">recorre el mapa con tu MOKEPON!</h1>
+            <canvas id="mapa"></canvas>
+            <section id="botones-de-ataque">
+            <button id = "boton-de-ataque" 
+                ontouchend="detenerMovimiento()"
+                onmouseup="detenerMovimiento()" 
+                ontouchstart="moverArriba()"
+                onmousedown="moverArriba()"
+                >Arriba</button>
+            <section id="botones-de-ataque-medio">
+            <button id = "boton-de-ataque" 
+                ontouchend="detenerMovimiento()"
+                onmouseup="detenerMovimiento()" 
+                ontouchstart="moverIzquierda()"
+                onmousedown="moverIzquierda()"
+            >Izquierda</button>
+            <button id = "boton-de-ataque" 
+                ontouchend="detenerMovimiento()"
+                onmouseup="detenerMovimiento()" 
+                ontouchstart="moverDerecha()"
+                onmousedown="moverDerecha()"
+                >Derecha</button>
+            </section>
+            <button id = "boton-de-ataque" 
+                ontouchend="detenerMovimiento()"
+                onmouseup="detenerMovimiento()" 
+                ontouchstart="moverAbajo()"
+                onmousedown="moverAbajo()"
+                >Abajo</button>
+            </section>
+        </section>
+
+        <section id= "seleccionar-ataque">
+            <h1 id="titulo" class="titulo">Mokepon</h1>
+           
+            <h2 class="subtitulo">Elije tu ataque: </h2>
+ 
+
+
+
+
+            <div id="contenedorAtaques" class="botones"> 
+                <!-- <button id="boton-fuego" class="boton-de-ataque" > fuego 🔥</button>
+                <button id="boton-agua" class="boton-de-ataque" > agua 💧 </button>
+                <button id="boton-tierra" class="boton-de-ataque" > tierra 🌱 </button> -->
+            </div>
+
+
+
+
+
+            
+            <div id="mensajes">
+                <p id="resultado"> mucha suerte </p>
+                <section id="reiniciar">
+                <button id="boton-reiniciar">Reiniciar</button>
+                </section>
+            </div>
+            <div>
+                <section id = 'mensajeResultado'>
+                    <P> EL RESULTADO ES <span id="resultadoTotal"></span>
+                </section>
+                <p id="resultado"></p>
+                 
+            </div>
+            <div class="ataques"> 
+                <div class="ataques-jugador">
+                    <p id="vidas-jugador">0</p>
+                    <p id="mascotaJugador"></p>
+                    <p id="ataquesDelJugador"></p>
+                </div>
+                <div class="ataques-enemigo">
+                    <p id="vidas-enemigo">0</p>
+                    <p id="mascotaEnemigo"></p>
+                    <p id="ataquesDelEnemigo"></p>
+                </div>    
+            </div>
+        </section>
+       
+    <script src="./mokepon.js"></script>
+    </body>
+
+</html>
