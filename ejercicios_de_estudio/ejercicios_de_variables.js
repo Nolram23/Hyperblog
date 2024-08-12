@@ -195,4 +195,18 @@ if (prom <= 5){
   console.log("tu promedio es Notable: " + prom);
 };
 */
-
+function pregunta (){
+var pregunta1 = prompt("ingrese una pregunta: ");
+if (pregunta1 == "a quien ama marlon miranda?") {
+  console.log("maria fernanda villamizar")
+  pregunta();
+}else if (pregunta1 == "cuanto la ama?") {
+  console.log("3 millones")
+  pregunta();
+}
+else {
+  console.log("no lo entiendo, ingrese otra pregunta")
+  pregunta();
+}
+}
+pregunta();
